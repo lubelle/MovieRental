@@ -1,6 +1,7 @@
 ## ASP.NET MVC online training
 
 1. ASP.NET MVC Fundamentals
+	- controllers, actions, routing, views and view models
 2. Entity Framework (Code-First)
 3. Forms
 4. Validation
