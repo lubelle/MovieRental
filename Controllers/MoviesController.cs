@@ -53,11 +53,12 @@ namespace Vidly.Controllers
             return Content(string.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
         }
 
+        [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)")]
         public ActionResult ByReleaseDate(int year, int month)
         {
             return Content(year + "/" + month);
         }
 
-        
+        // attribute route constrains: min, max, minlength, maxlength, int, float, guid
     }
 }
