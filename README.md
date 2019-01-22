@@ -3,6 +3,8 @@
 1. ASP.NET MVC Fundamentals
 	- controllers, actions, routing, views and view models
 2. Entity Framework (Code-First)
+	- DbContext<<database>>, DbSet<<table>>
+	- LINQ(add/modity/delet) <<DbSet>>, SQL <<database>>
 3. Forms
 4. Validation
 5. Build RESTful Services
