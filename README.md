@@ -5,6 +5,7 @@
 2. Entity Framework (Code-First)
 	- DbContext<<database>>, DbSet<<table>>
 	- LINQ(add/modity/delet) <<DbSet>>, SQL <<database>>
+	- eager loading: load obj and related objs together
 3. Forms
 4. Validation
 5. Build RESTful Services
