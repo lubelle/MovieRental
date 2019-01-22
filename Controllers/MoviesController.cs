@@ -61,6 +61,7 @@ namespace Vidly.Controllers
                 pageIndex = 1;
             if (string.IsNullOrWhiteSpace(sortBy))
                 sortBy = "Name";
+
             return Content(string.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
         }
 
