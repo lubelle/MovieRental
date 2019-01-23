@@ -40,17 +40,18 @@ namespace Vidly.Controllers
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
-            var viewModel = new CustomerFormViewModel
+            var newCustomerViewModel = new CustomerFormViewModel
             {
                 MembershipTypes = membershipTypes,
+                Customer = new Customer()
             };
-            return View("CustomerForm", viewModel);
+            return View("CustomerForm", newCustomerViewModel);
         }
 
         [HttpPost]
         public ActionResult Save(Customer customer)  // mvc model binding
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid)    // always false if in New(), Customer didn't get initilized
             {
                 var viewModel = new CustomerFormViewModel
                 {
