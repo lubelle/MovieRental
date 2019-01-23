@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,86 +11,29 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-        // GET: Movies/Random
-        public ActionResult Random()
+        private ApplicationDbContext _context;
+        public MoviesController()
         {
-            var movie = new Movie() { Name = "Shrek!" };
-            var customers = new List<Customer>
-            {
-                new Customer { Name = "Mary Smith" },
-                new Customer { Name = "John Smith"}
-            };
-            var viewModel = new RandomMovieViewModel
-            {
-                Customers = customers
-            };
-            return View(viewModel);
-            //return Content("Hello");
-            //return HttpNotFound();
-            //return new EmptyResult();
-            //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
+            _context = new ApplicationDbContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
         }
 
-        //ViewResult View()
-        //PartialViewResult PartialView()
-        //ContentResult   Content()
-        //RedirectResult  Redirect()
-        //RedirectToRouteResult   RedirectToAction() 
-        //JsonResult  Json() 
-        //FileResult  File() 
-        //HttpNotFoundResult  HttpNotFound()
-        //
-
-        // Ctrl+Shift+B
-        // Alt+Tab
-        // Ctrl+R
-
-        // Parameter Sources
-        // in the url: /movies/edit/1
-        // in the query string: /movies/edit?id=1
-        // in the form data: id=1
-
-        public ActionResult Edit(int id)
+        public ViewResult Index()
         {
-            return Content("id=" + id);
-        }
-
-        public ActionResult Index(int? pageIndex, string sortBy)
-        {
-            //if (!pageIndex.HasValue)
-            //    pageIndex = 1;
-            //if (string.IsNullOrWhiteSpace(sortBy))
-            //    sortBy = "Name";
-            //var movies = new List<Movie>
-            //{
-            //    new Movie { Name = "Doctor Strange"},
-            //    new Movie { Name = "Cloud Atlas"}
-            //};
-            //var viewModel = new RandomMovieViewModel
-            //{
-            //    Movies = movies
-            //};
-            ////return Content(string.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
-            //return View(viewModel);
-
-            var movies = GetMovies();
+            var movies = _context.Movies.Include(m => m.Genre).ToList();
             return View(movies);
         }
 
-        private IEnumerable<Movie> GetMovies()
+        public ActionResult Details(int id)
         {
-            return new List<Movie>
-            {
-                new Movie { Id = 1, Name = "Doctor Strange"},
-                new Movie { Id = 2, Name = "Cloud Altla"}
-            };
-        }
-        [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
-        public ActionResult ByReleaseDate(int year, int month)
-        {
-            return Content(year + "/" + month);
+            var movie = _context.Movies.Include(m => m.Genre).FirstOrDefault(m => m.Id == id);
+            if (movie == null)
+                return HttpNotFound();
+            return View(movie);
         }
 
-        // attribute route constrains: min, max, minlength, maxlength, int, float, guid
     }
 }
