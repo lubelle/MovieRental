@@ -6,6 +6,9 @@
 }
 
 <h2>Movies</h2>
+@Html.ActionLink("NEW MOVIE", "new", "Movies", new { @class = "btn btn-primary"})
+<br />
+<br />
 @if (!Model.Any())
 {
     <p>We don't have any movies yet.</p>
