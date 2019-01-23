@@ -49,6 +49,7 @@ namespace Vidly.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Customer customer)  // mvc model binding
         {
             if (!ModelState.IsValid)    // always false if in New(), Customer didn't get initilized; new Customer() default Customer.Id to 0
