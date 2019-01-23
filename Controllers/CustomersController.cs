@@ -43,7 +43,7 @@ namespace Vidly.Controllers
             var newCustomerViewModel = new CustomerFormViewModel
             {
                 MembershipTypes = membershipTypes,
-                Customer = new Customer()
+                Customer = new Customer()   // <-- cause ModelState to be false, if Customer is not set; Customer.Id is the hidden field in the form
             };
             return View("CustomerForm", newCustomerViewModel);
         }
@@ -51,7 +51,7 @@ namespace Vidly.Controllers
         [HttpPost]
         public ActionResult Save(Customer customer)  // mvc model binding
         {
-            if (!ModelState.IsValid)    // always false if in New(), Customer didn't get initilized
+            if (!ModelState.IsValid)    // always false if in New(), Customer didn't get initilized; new Customer() default Customer.Id to 0
             {
                 var viewModel = new CustomerFormViewModel
                 {
