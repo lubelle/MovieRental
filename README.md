@@ -6,9 +6,11 @@
 	- DbContext<<database>>, DbSet<<table>>
 	- LINQ(add/modity/delet) <<DbSet>>, SQL <<database>>
 	- eager loading: load obj and related objs together
-
 3. Forms
 4. Validation
+	- add data annotation to entities
+	- use ModelState to change the flow of program
+	- add validation message to form
 5. Build RESTful Services
 6. Client-side Development
 7. Authentication and Authorization
