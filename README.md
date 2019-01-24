@@ -17,6 +17,12 @@
 	-pure viewmodel implementation
 	
 ## Build RESTful Services
+	-Data Services(Web Application Programming Interfaces)
+	-Less server resources (improve scalability)
+	-Less bandwidth (improve performance)
+	-Support for a broad range of clients
+	-jQuery plugin:DataTable + WebAPI
+	-Get|Post|Put|Delete
 ## Client-side Development
 ## Authentication and Authorization
 ## Performance Optimization
