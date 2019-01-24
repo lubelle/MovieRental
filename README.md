@@ -23,6 +23,8 @@
 	-Support for a broad range of clients
 	-jQuery plugin:DataTable + WebAPI
 	-Get|Post|Put|Delete
+	-use custom DTOs instead of domain objects
+	-automapper
 ## Client-side Development
 ## Authentication and Authorization
 ## Performance Optimization
