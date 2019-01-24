@@ -1,22 +1,27 @@
 ## ASP.NET MVC online training
 
-1. ASP.NET MVC Fundamentals
-	- controllers, actions, routing, views and view models
-2. Entity Framework (Code-First)
-	- DbContext<<database>>, DbSet<<table>>
-	- LINQ(add/modity/delet) <<DbSet>>, SQL <<database>>
-	- eager loading: load obj and related objs together
-3. Forms
-4. Validation
-	- add data annotation to entities:[Required],[StringLength(255)],[Range(1,10)],[Compare("OtherProperty")],[Phone],[EmailAddress],[Url],[RegularExpression("...")]
-	- use ModelState to change the flow of program
-	- add validation message to form
-5. Build RESTful Services
-6. Client-side Development
-7. Authentication and Authorization
-8. Performance Optimization
-9. Building a Feature Systematically (end to end)
-10. Deployment
+## ASP.NET MVC Fundamentals
+	controllers, actions, routing, views and view models
+	
+## Entity Framework (Code-First)
+	-DbContext<<database>>, DbSet<<table>>
+	-LINQ(add/modity/delet) <<DbSet>>, SQL <<database>>
+	-eager loading: load obj and related objs together
+	
+## Forms
+
+## Validation
+	-add data annotation to -entities:[Required],[StringLength(255)],[Range(1,10)],[Compare("OtherProperty")],[Phone],[EmailAddress],[Url],[RegularExpression("...")]
+	-use ModelState to change the flow of program
+	-add validation message to form
+	-pure viewmodel implementation
+	
+## Build RESTful Services
+## Client-side Development
+## Authentication and Authorization
+## Performance Optimization
+## Building a Feature Systematically (end to end)
+## Deployment
 
 
 
