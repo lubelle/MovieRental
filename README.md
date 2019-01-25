@@ -28,6 +28,9 @@
 ## Client-side Development
 	-jQuery: Datatable and Bootbox.js
 	-install-package bootbox -version:4.3.0
+	-install-package jquery.datatables -version:1.10.11
+	-Optimize jQuery code
+	-add pagination, sorting
 ## Authentication and Authorization
 ## Performance Optimization
 ## Building a Feature Systematically (end to end)
