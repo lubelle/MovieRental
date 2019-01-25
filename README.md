@@ -23,9 +23,11 @@
 	-Support for a broad range of clients
 	-jQuery plugin:DataTable + WebAPI
 	-Get|Post|Put|Delete
-	-use custom DTOs instead of domain objects
-	-automapper
+	-use automapper with custom DTOs instead of domain objects
+	-install-package automapper -version:4.1
 ## Client-side Development
+	-jQuery: Datatable and Bootbox.js
+	-install-package bootbox -version:4.3.0
 ## Authentication and Authorization
 ## Performance Optimization
 ## Building a Feature Systematically (end to end)
