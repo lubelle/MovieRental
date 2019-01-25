@@ -32,6 +32,8 @@
 	-Optimize jQuery code
 	-add pagination, sorting
 ## Authentication and Authorization
+	-Identity Framework(Domain:IdentityUser,Role;API/Service:UserManager,RoleManager,SignInManager;Persistence:UserStore,RoleStore)
+	-use filters:[Authorize],[AllowAnonymous]
 ## Performance Optimization
 ## Building a Feature Systematically (end to end)
 ## Deployment
