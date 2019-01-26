@@ -1,30 +1,29 @@
-﻿@model IEnumerable<Vidly.Models.Movie>
-
+﻿@model IEnumerable<Vidly.Models.Customer>
 @{
-    ViewBag.Title = "Movies";
+    ViewBag.Title = "Customers";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Movies</h2>
+<h2>Customers</h2>
 
-<table id="movies" class="table table-bordered table-hover">
+<table id="customers" class="table table-bordered table-hover">
     <thead>
         <tr>
-            <th>Movie</th>
-            <th>Genre</th>
+            <th>Customer</th>
+            <th>Membership Type</th>
         </tr>
     </thead>
     <tbody>
     </tbody>
 </table>
 
-@section scripts
+@section scripts 
 {
     <script>
         $(document).ready(function () {
-            var table = $("#movies").DataTable({
+            var table = $("#customers").DataTable({
                 ajax: {
-                    url: "/api/movies",
+                    url: "/api/customers",
                     dataSrc: ""
                 },
                 columns: [
@@ -32,15 +31,12 @@
                         data: "name"
                     },
                     {
-                        data: "genre.name"
+                        data: "membershipType.name"
                     }
                 ]
             });
 
         });
- 
     </script>
 }
-
-
 
