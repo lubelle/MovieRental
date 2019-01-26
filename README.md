@@ -35,6 +35,7 @@
 	-Identity Framework(Domain:IdentityUser,Role;API/Service:UserManager,RoleManager,SignInManager;Persistence:UserStore,RoleStore)
 	-use filters:[Authorize],[AllowAnonymous]
 	-seeding users and roles
+	-OAuth and Social Logins
 ## Performance Optimization
 ## Building a Feature Systematically (end to end)
 ## Deployment

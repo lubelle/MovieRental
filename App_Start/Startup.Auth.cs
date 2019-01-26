@@ -54,6 +54,7 @@ namespace Vidly
             //   consumerKey: "",
             //   consumerSecret: "");
 
+            // need to convert FB account to a developer account first
             //app.UseFacebookAuthentication(
             //   appId: "",
             //   appSecret: "");
