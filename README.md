@@ -47,6 +47,13 @@
 	-install-package Twitter.Typeahead
 	-install-package toastr
 ## Deployment
+	-update-database -script
+	-update-database -script -SourceMigration:<<start_from_migration_name>>
+	-handle customErrors 
+	-logging unhandled exceptions
+	-install-package Elmah
+	-localhost:44300/elmah.axd
+	
 
 
 
