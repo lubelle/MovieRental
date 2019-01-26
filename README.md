@@ -37,6 +37,12 @@
 	-seeding users and roles
 	-OAuth and Social Logins
 ## Performance Optimization
+	-data tier: optimizing queries
+	-install-package glimpse.mvc5
+	-install-package glimpse.ef6
+	-localhost:44300/glimpse.axd
+	-application tier:OutputCaching[duration][location][varybyparam];memorycaching for data;release builds;disabling session
+	-client tier:light weight dtos,use bundles on css and js
 ## Building a Feature Systematically (end to end)
 ## Deployment
 
