@@ -44,6 +44,8 @@
 	-application tier:OutputCaching[duration][location][varybyparam];memorycaching for data;release builds;disabling session
 	-client tier:light weight dtos,use bundles on css and js
 ## Building a Feature Systematically (end to end)
+	-install-package Twitter.Typeahead
+	-install-package toastr
 ## Deployment
 
 

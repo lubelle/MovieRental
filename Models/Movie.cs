@@ -31,5 +31,7 @@ namespace Vidly.Models
         [Required]
         [Display(Name = "Genre")]
         public byte GenreId { get; set; }   // foreign key;  validate this field not the Navigation Prop.
+
+        public byte NumberAvailable { get; set; }
     }
 }
